@@ -1,15 +1,21 @@
-// MODULES - Encapsulated Code (only share minimum)
-// common js, every file is module (by default)
-const names = require('./4-names')
-const sayHi = require('./5-utils')
-const data = require('./6-alternative-flavor')
-require('./7-mind-grenade')
+// npm - global command, comes with node
+// npm --version
+
+// local dependency - use it only in this particular object
+// npm i <packageName>
+
+// global dependency - use it any project
+// npm install -g <packageName>
 
 
-// console.log(names)
+// package.json - manifest file (stores important info about project/package) 
+// manual approach (create package.json in the root, create properties etc)
+// npm init (step by step)
+// npm init -y (everything default)
 
 
+const _ = require('lodash');
 
-// sayHi('susan')
-// sayHi(names.john)
-// sayHi(names.peter)
+const items = [1, [2, [3, [4]]]]
+const newItems = _.flattenDeep(items)
+console.log(newItems)
